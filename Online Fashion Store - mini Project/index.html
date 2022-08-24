@@ -26,7 +26,10 @@ $server = 'http://' . $_SERVER['SERVER_NAME'] . '/ecom/';
     <style>
         body{
             background-color: black;
-            
+            background-image: url("bird_logo.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
         }
         input[type=button],input[type=submit],input[type=reset]{
             background-color: black;
@@ -109,6 +112,7 @@ $server = 'http://' . $_SERVER['SERVER_NAME'] . '/ecom/';
     <li><a href="#News">News</a></li>
     <li><a href="#Contact">Contact</a></li>
     <li><a href="#About">About</a></li>
+    <li><a href="#Blogs">Blogs</a></li>
 
 </ul>
 <!-- <img src="flower.jpg" height="600" width="1200"> -->
@@ -121,7 +125,10 @@ $server = 'http://' . $_SERVER['SERVER_NAME'] . '/ecom/';
         </marquee>
         </footer>
     </div>
-</div>
+<span>
+    <a class="text-white" href="TermsofService"><footer style="text-align: center; color: white;" >Terms of Services</footer></a>
+    <a class="text-white" href="PrivacyPolicy"><footer style="text-align: center; color: white;" >Privacy Policy</footer></a>
+</span>
 
 
 </body>

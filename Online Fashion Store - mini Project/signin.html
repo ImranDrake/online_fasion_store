@@ -52,8 +52,8 @@ button:hover {
 }
 
 img.avatar {
-  width: 40%;
-  border-radius: 50%;
+  width: 10%;
+  border-radius: 12.5%;
 }
 
 .container {
@@ -141,16 +141,54 @@ span.psw {
 </head>
 <body>
 
-<h2 style="color: white; text-align: center;">Signup page</h2>
+<h2 style="color: white; text-align: center;">Login/Signup page</h2>
 
-<button onclick="document.getElementById('id01').style.display='block'">Signup</button>
+<button onclick="document.getElementById('id02').style.display='block'">Signup</button>
+
+<div id="id02" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="images/avatar.jpg" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Full Name</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="emailID"><b>Email Address</b></label>
+      <input type="text" placeholder="Enter Email ID" name="EmailID" required>
+
+      <label for="phno."><b>Phone Number</b></label>
+      <input type="text" placeholder="Enter Phone Number" name="phno." required>
+
+      <label for="city"><b>City</b></label>
+      <input type="text" placeholder="Enter City" name="city" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Signup</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+</div>
+
+<button onclick="document.getElementById('id01').style.display='block'">Login</button>
 
 <div id="id01" class="modal">
   
   <form class="modal-content animate" action="/action_page.php" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+      <img src="images/avatar.jpg" alt="Avatar" class="avatar">
     </div>
 
     <div class="container">
@@ -176,6 +214,7 @@ span.psw {
 <script>
 // Get the modal
 var modal = document.getElementById('id01');
+var modal = document.getElementById('id02');
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {

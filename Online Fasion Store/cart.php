@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>cart.php</title>
+</head>
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 
@@ -138,78 +139,30 @@ span.psw {
   }
 }
 </style>
-</head>
-<body>
 
-<h2 style="color: white; text-align: center;">Login/Signup page</h2>
+  </head>
 
-<button onclick="document.getElementById('id02').style.display='block'">Signup</button>
-
-<div id="id02" class="modal">
+ <body>
+ 	<button onclick="document.getElementById('id02').style.display='block'">Show bill</button>
+ 	<div id="id02" class="modal">
   
-  <form class="modal-content animate" action="/action_page.php" method="post">
+  <form class="modal-content animate" action="ordered.php" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="images/avatar.jpg" alt="Avatar" class="avatar">
     </div>
 
     <div class="container">
-      <label for="uname"><b>Full Name</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
-      <label for="emailID"><b>Email Address</b></label>
-      <input type="text" placeholder="Enter Email ID" name="EmailID" required>
-
-      <label for="phno."><b>Phone Number</b></label>
-      <input type="text" placeholder="Enter Phone Number" name="phno." required>
-
-      <label for="city"><b>City</b></label>
-      <input type="text" placeholder="Enter City" name="city" required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-        
-      <button type="submit">Signup</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
+    	<p style="">1 x Sting Denim shirt  =  100$ </p>
+    	<p style="">Taxes 10% includes 10%</p>
+    	<hr>
+    	<h4> Total = 110$ </h4>
     </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+     <div class="container" style="background-color:#403a6c;">
+      <button type="button" onclick="document.location='ordered.php'" class="cancelbtn" style="background-color:#04AA6D;">Confirm</button>
     </div>
-  </form>
-</div>
+  	
 
-<button onclick="document.getElementById('id01').style.display='block'">Login</button>
-
-<div id="id01" class="modal">
-  
-  <form class="modal-content animate" action="/action_page.php" method="post">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="images/avatar.jpg" alt="Avatar" class="avatar">
-    </div>
-
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-        
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-</div>
 
 <script>
 // Get the modal
@@ -224,5 +177,7 @@ window.onclick = function(event) {
 }
 </script>
 
-</body>
+
+  </body>
+
 </html>
